@@ -17,6 +17,12 @@
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+
+    <!--Jquery pop up scripts -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="{{ asset('js/jquery.leanModal.min.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="Css/loginForm.css">
+
 </head>
 <body>
 	<nav class="navbar navbar-default">
