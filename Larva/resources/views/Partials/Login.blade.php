@@ -2,22 +2,30 @@
 <!--im thinking the login should be a small popup on the site
 <!-- when they click the button -->
 
-@section('login')
 
-    <button class="login-form" rel="leanModal" name="test" href="#test">
-        Login
-    </button>
+<button class="login-form" rel="leanModal" name="test" href="#test">
+    Login
+</button>
 
-    <div id="login" style="display:none;">
-        <h1>User Login</h1>
+<div id="loginmodal" style="display:none;">
+    <h1>User Login</h1>
+    <form id="loginform" name="loginform" method="post" action="index.html">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" class="txtfield" tabindex="1">
 
-        <form id="loginForm" name="loginForm" method="post" action="#">
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username" class="txtfield">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" class="txtfield" tabindex="2">
 
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" class="txtfield">
-            <div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In"></div>
-        </form>
-    </div>
-@stop
+        <div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3"></div>
+    </form>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+        $('#loginform').submit(function(e){
+            return false;
+        });
+
+        $('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
+    });
+</script>
