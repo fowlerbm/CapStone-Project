@@ -16,10 +16,12 @@ class Achievements extends Migration {
             $table->increments('achievement_id');
             $table->string('name');
             $table->string('description');
-            $table->foreign('game_id')->references('game_id')->on('user');
             $table->integer('point_value');
             $table->string('icon_id');
             $table->timestamps();
+            $table->integer('game_id');
+
+            $table->foreign('game_id')->references('game_id')->on('user');
         });
 	}
 

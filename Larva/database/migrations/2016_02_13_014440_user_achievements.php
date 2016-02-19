@@ -14,9 +14,12 @@ class UserAchievements extends Migration {
 	{
         Schema::create('user_achievements', function (Blueprint $table) {
             $table->increments('userAch_id');
+            $table->timestamps();
+            $table->integer('user_id');
+            $table->integer('achievement_id');
+
             $table->foreign('user_id')->references('user_id')->on('users');
             $table->foreign('achievement_id')->references('achievement_id')->on('achievements');
-            $table->timestamps();
         });
 	}
 
