@@ -17,6 +17,24 @@
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+
+    <!--Jquery pop up scripts -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="{{ asset('js/jquery.leanModal.min.js') }}"></script>
+    <style>
+        #lean_overlay {
+            position: fixed;
+            z-index:100;
+            top: 0px;
+            left: 0px;
+            height:100%;
+            width:100%;
+            background: #000;
+            display: none;
+        }
+
+    </style>
+
 </head>
 <body>
 	<nav class="navbar navbar-default">
