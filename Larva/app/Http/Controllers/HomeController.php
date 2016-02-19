@@ -30,7 +30,17 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('Host');
+		return view('home');
 	}
 
+
+	/**
+	 * Show the application dashboard to the user.
+	 *
+	 * @return Response
+	 */
+	public function user()
+	{
+		return view('users.Profile');
+	}
 }

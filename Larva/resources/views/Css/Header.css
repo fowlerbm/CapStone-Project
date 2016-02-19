@@ -1,4 +1,27 @@
-#logo {
-position: relative;
-    float: left;
+
+#nav {
+    padding-bottom:5em;
+
 }
+
+#logo {
+    position: relative;
+    float: left;
+
+    width: 30%;
+}
+
+#navTools{
+    position: relative;
+    float: left;
+
+    width: 50%;
+}
+
+#user{
+    position: relative;
+    float: left;
+
+    width: 20%;
+}
+	

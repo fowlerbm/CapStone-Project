@@ -1,7 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Brando
- * Date: 2/18/2016
- * Time: 9:45 PM
- */
+
+
+//if user is logged on show logout button
+if(!isset($_SESSION["login"])){
+    echo  "Please login to view this page";
+}
+
+?>

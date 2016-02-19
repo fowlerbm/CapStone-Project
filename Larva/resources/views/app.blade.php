@@ -28,12 +28,16 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Laravel</a>
+				<a class="navbar-brand" href="#">Larva</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li><a href="{{ url('/') }}">Home</a></li>
+					<li><a href="{{ url('/') }}">User</a></li>
+					<li><a href="{{ url('/') }}">Games</a></li>
+					<li><a href="{{ url('/') }}">Forums</a></li>
+					<li><a href="{{ url('/') }}">Random</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">

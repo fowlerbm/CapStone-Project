@@ -1,0 +1,20 @@
+#Featured {
+    position: relative;
+    float: left;
+    margin: 0 1em 0 1em;
+    width: 60%;
+    padding-bottom:1em;
+}
+
+#Popular{
+    position: relative;
+
+    margin: 0 1em 0 1em;
+    width: 60%;
+}
+#TopPlayers{
+    position: relative;
+    float: right;
+
+    width: 20%;
+}

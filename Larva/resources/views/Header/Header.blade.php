@@ -1,5 +1,9 @@
 
-<div id="logo"> <img src="../../assets/Images/Larva.png"> </div>
+ <link rel="stylesheet" type="text/css" href="../Css/Header.css">
+
+ <div id="nav">
+
+<div id="logo"> <img src="Logo.png"> </div>
 
 
 <div id="navTools">
@@ -13,14 +17,15 @@
 
 <div id="user">
 
-    //if user is logged in show user icon
+    <!--if user is logged in show user icon
     //code goes here
 
     //if user is not logged on show logon button
 
 
     //if user is logged on show user stats
-    //user stats go here
+    //user stats go here-->
+
 <?php
 
 
@@ -31,9 +36,12 @@
         else
         {
             echo  " <button>Login</button>";
+            echo  " <button>Register</button>";
         }
 
 ?>
 
 
 </div>
+
+ </div>
