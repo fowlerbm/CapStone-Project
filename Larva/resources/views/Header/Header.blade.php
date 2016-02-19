@@ -17,12 +17,23 @@
     //code goes here
 
     //if user is not logged on show logon button
-    <button>Login</button>
+
 
     //if user is logged on show user stats
     //user stats go here
+<?php
+
 
     //if user is logged on show logout button
-    <button>Logout</button>
+        if(isset($_SESSION["login"])){
+                echo  "<button>Logout</button>";
+            }
+        else
+        {
+            echo  " <button>Login</button>";
+        }
+
+?>
+
 
 </div>
