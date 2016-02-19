@@ -23,8 +23,8 @@ class Game extends Migration {
             $table->string('tags');
             $table->string('created_on');
             $table->string('updated_on');
-            $table->string('rating');
-            $table->string('Comment_thread');
+            $table->foreign('rating')->references('rating')->on('game_user_rating');
+            $table->foreign('comment_thread')->references('thread_id')->on('thread');
             $table->timestamps();
         });
 	}

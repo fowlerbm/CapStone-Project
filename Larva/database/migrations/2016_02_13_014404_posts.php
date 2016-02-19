@@ -15,7 +15,7 @@ class Posts extends Migration {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('post_id');
             $table->foreign('thread_id')->references('thread_id')->on('thread');
-            $table->string('user_id');
+            $table->foreign('user_id')->references('user_id')->on('users');
             $table->string('content');
             $table->string('flagged');
             $table->timestamps();
