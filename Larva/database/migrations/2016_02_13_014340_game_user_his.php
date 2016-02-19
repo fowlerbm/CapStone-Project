@@ -15,8 +15,8 @@ class GameUserHis extends Migration {
             Schema::create('game_user_his', function (Blueprint $table)
             {
                 $table->increments('his_id');
-                $table->string('user_id');
-                $table->string('game_id');
+                $table->foreign('user_id')->references('user_id')->on('users');
+                $table->foreign('game_id')->references('game_id')->on('game');
                 $table->timestamps();
             });
     }

@@ -17,7 +17,6 @@ class GameUserRating extends Migration {
             $table->foreign('user_id')->references('user_id')->on('user');
             $table->foreign('rating')->references('rating')->on('game');
             $table->foreign('game_id')->references('game_id')->on('user');
-            //Finished?
             $table->timestamps();
         });
 	}
