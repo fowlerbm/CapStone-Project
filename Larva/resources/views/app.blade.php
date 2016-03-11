@@ -25,6 +25,7 @@
 
 </head>
 <body>
+
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -57,11 +58,13 @@
 								<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
 							</ul>
 						</li>
-					@endif
+					@endif --!>
 				</ul>
 			</div>
 		</div>
-	</nav>
+	</nav> --!>
+
+
 
 	@yield('content')
 
