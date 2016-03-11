@@ -21,8 +21,6 @@ class Game extends Migration {
             $table->string('file_Location');
             $table->string('author_id');
             $table->string('tags');
-            $table->string('created_on');
-            $table->string('updated_on');
             $table->timestamps();
             $table->integer('rating');
             $table->integer('comment_thread');
