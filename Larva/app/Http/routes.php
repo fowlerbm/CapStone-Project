@@ -18,6 +18,7 @@ Route::get('home', 'HomeController@index');
 
 Route::get('user', 'HomeController@user');
 
+Route::get('games', 'GamesController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
