@@ -16,7 +16,7 @@
 
 Route::get('home', 'HomeController@index');
 
-Route::get('user', 'HomeController@user');
+Route::get('user', 'UserController@index');
 
 
 Route::controllers([
