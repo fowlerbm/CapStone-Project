@@ -1,9 +1,10 @@
 <!-- page for browsing games-->
+<div class="gamesContainer">
+    @foreach($games as $game)
 
-@foreach($games as $game)
+        <div class="gameBrowse">
 
-    <div class="gameBrowse">
+        </div>
 
-    </div>
-
-@endforeach
+    @endforeach
+</div>
