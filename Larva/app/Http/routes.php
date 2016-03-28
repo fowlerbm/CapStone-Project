@@ -14,12 +14,18 @@
 
 //Route::get('/', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
+Route::resource('home', 'HomeController');
 
-Route::get('user', 'HomeController@user');
-Route::get('user', 'UserController@index');
+Route::resource('user', 'UserController');
 
-Route::get('games', 'GamesController@index');
+Route::resource('games', 'GamesController');
+
+//Route::get('home', 'HomeController@index');
+//
+//Route::get('user', 'HomeController@user');
+//Route::get('user', 'UserController@index');
+//
+//Route::get('games', 'GamesController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
