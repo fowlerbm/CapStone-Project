@@ -1,59 +1,32 @@
-<script src="js/my_js.js"></script>
- <link rel="stylesheet" type="text/css" href="../Css/Header.css">
+<link rel="stylesheet" type="text/css" href="../../../public/css/Header.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
- <div id="nav">
+<nav>
+    <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+                <a href="#"><div id="navbar-logo"> <img src="../../../public/Pics/Street%20sign.jpg"> </div></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse navbar-menubuilder">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="#">Games</a>
+                    </li>
+                    <li><a href="#">Forum</a>
+                    </li>
+                    <li><a href="#">Random</a>
+                    </li>
 
-<div id="logo"> <img src="Logo.png"> </div>
-
-
-<div id="navTools">
-
-    <button>Games</button>
-    <button>Forum</button>
-    <button>Random</button>
-
-</div>
-
-
-<div id="user">
-
-    <!--if user is logged in show user icon
-    //code goes here
-
-    //if user is not logged on show logon button
-
-
-    //if user is logged on show user stats
-    //user stats go here-->
-
-<?php
-
-
-    //if user is logged on show logout button
-        if(isset($_SESSION["login"])){
-                //echo  '<button id="popup" onclick="div_show()">Popup</button>';
-            }
-        else
-        {
-            echo  '<button id="popup" onclick="div_show()">Login</button>';
-            echo  " <button>Register</button>";
-        }
-
-?>
-
-    <div id="popupContact">
-        <!-- Contact Us Form -->
-        <form action="#" id="form" method="post" name="form">
-            <img id="close" src="Logo.png" onclick ="div_hide()">
-            <h2>Contact Us</h2>
-            <hr>
-            <input id="name" name="name" placeholder="Name" type="text">
-            <input id="Password" name="Password" placeholder="" type="text">
-            <textarea id="msg" name="message" placeholder="Message"></textarea>
-            <a href="javascript:check_empty()" id="submit">Send</a>
-        </form>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Login</a>
+                    </li>
+                    <li><a href="#">Register</a>
+                </ul>
+            </div>
+        </div>
     </div>
-
-</div>
-
- </div>
+</nav>
