@@ -17,7 +17,7 @@ class GamesController extends Controller {
 	{
 		$games = Game::all();
 
-        return view('games.game');
+        return view('games.index', compact('games'));
 	}
 
 	/**
