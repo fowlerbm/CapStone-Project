@@ -14,7 +14,7 @@ class UserController extends Controller {
 */
 
 /**
-* Create a new controller instance.
+* Create a new controller instan/home/inet2005/PhpstormProjects/CapStone-Project/Larvace.
 *
 */
 public function __construct()

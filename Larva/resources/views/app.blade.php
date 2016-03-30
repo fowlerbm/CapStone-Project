@@ -91,7 +91,7 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span> <li><a href="{{ url('/home') }}">Home</a></li>
+                <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
@@ -103,7 +103,7 @@
                 <li><a href="{{ url('/user') }}">User</a></li>
                 <li><a href="{{ url('#') }}">Games</a></li>
                 <li><a href="{{ url('#') }}">Forums</a></li>
-                <li><a href="{{ url('#') }}">Random</a></li>
+                <li><a href="{{ url('/games/1') }}">Random</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">

@@ -1,0 +1,87 @@
+#GameObject
+{
+
+    width: 100%;
+    height: auto;
+    display: block;
+    float: right;
+}
+#Game
+{
+    padding-left: 28%;
+}
+
+.nav-tabs
+{
+    padding-left: 33%;
+}
+
+#GameInfo
+{
+    float: left;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    border: 1px dotted #bababa;
+
+}
+
+ul#TagList
+{
+    padding: 1em;
+}
+
+ul#TagList li {
+    display: inline;
+}
+
+ul#TagList li {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+
+ul#DetailList
+{
+    padding: 1em;
+}
+
+ul#DetailList li {
+    display: inline;
+}
+
+ul#DetailList li {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+
+
+ul#OptionsList
+{
+    padding: 1em;
+}
+
+ul#OptionsList li {
+    display: inline;
+}
+
+ul#OptionsList li {
+    background-color: red;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+ul#OptionsList li a {
+    color: white;
+}
