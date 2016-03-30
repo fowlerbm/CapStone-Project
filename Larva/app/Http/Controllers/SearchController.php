@@ -4,6 +4,10 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use App\Game;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
+
 
 class SearchController extends Controller {
 
@@ -14,13 +18,11 @@ class SearchController extends Controller {
 	 */
 	public function index()
 	{
-		$search = \Request::get('search');
+		$search = Input::get('search');
 
-		$results = Game::where('title', 'like', '%'.$search.'%')
-								->orderBy('name')
-								->paginate(20);
+		$result = DB::table('game')->where('title', $search)->first();
 
-		return view('search.results', compact('results'));
+		return view('search.results', compact('result'));
 	}
 
 	/**
