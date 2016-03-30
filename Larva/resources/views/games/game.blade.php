@@ -3,7 +3,7 @@
 
 <link href="/css/GamePageCss.css" rel="stylesheet">
 
-<div id="GameTitle">{{ $game->title }}</div>
+<div id="GameTitle"><h2>{{ $game->title }}</h2></div>
 
 <div id="GameObject">
     <div id="Game">
@@ -21,7 +21,7 @@
 <div id="GameInfo">
     <!-- write the title -->
     <div id="GameTitle">
-        <h3>Unknown Game Title</h3>
+        <h3>{{ $game->title  }}</h3>
     </div>
 
     <!-- line for tags -->
