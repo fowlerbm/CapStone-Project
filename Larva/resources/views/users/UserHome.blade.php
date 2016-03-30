@@ -4,3 +4,10 @@
 
 </div>
 
+<div id="HomeChat">
+
+</div>
+
+<div id="HomeHub">
+
+</div>
