@@ -1,12 +1,11 @@
 <?php namespace App\Http\Controllers;
 
-use App\Game;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class GamesController extends Controller {
+class SearchController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -15,9 +14,13 @@ class GamesController extends Controller {
 	 */
 	public function index()
 	{
-		$games = Game::all();
+		$search = \Request::get('search');
 
-        return view('games.index', compact('games'));
+		$results = Game::where('title', 'like', '%'.$search.'%')
+								->orderBy('name')
+								->paginate(20);
+
+		return view('search.results', compact('results'));
 	}
 
 	/**
@@ -48,7 +51,7 @@ class GamesController extends Controller {
 	 */
 	public function show($id)
 	{
-
+		//
 	}
 
 	/**

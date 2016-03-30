@@ -24,17 +24,6 @@
     <link rel="stylesheet" type="text/css" href="css/loginForm.css">
 
     <script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
-    {{--<script type="text/javascript">--}}
-        {{--<!----}}
-        {{--var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";--}}
-        {{--if (document.location.protocol == 'https:')--}}
-            {{--unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");--}}
-        {{--document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');--}}
-        {{---->--}}
-    {{--</script>--}}
-
-
-
 
 </head>
 <body>
@@ -60,6 +49,9 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
+                <li>
+                    @include('Partials.search')
+                </li>
                 @if (Auth::guest())
                     <li><a href="{{ url('/auth/login') }}" rel="modal_trigger">Login</a></li>
                     <li><a href="{{ url('/auth/register') }}">Register</a></li>
