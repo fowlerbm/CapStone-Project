@@ -1,0 +1,34 @@
+#EventHeader
+{
+    height: auto;
+    width: 100%;
+}
+#HomeHub
+{
+    width: 100%;
+    display: block;
+}
+
+
+#UserFeed
+{
+    border: 1px dotted #bababa;
+    display: block;
+    float: left;
+    width: 70%;
+}
+
+#HomeUsers
+{
+
+    width: 30%;
+    float: right;
+    display: block;
+    border: 1px dotted #bababa;
+}
+
+.container
+{
+
+    float: left;
+}

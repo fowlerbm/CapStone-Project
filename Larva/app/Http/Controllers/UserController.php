@@ -29,7 +29,7 @@ public function __construct()
 */
 public function index()
 {
-return view('user');
+return view('users.UserHome');
 }
 
 
