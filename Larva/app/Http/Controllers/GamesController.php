@@ -48,7 +48,7 @@ class GamesController extends Controller {
 	 */
 	public function show($id)
 	{
-		$game = Game::find($id);
+		$game = Game::findOrFail($id);
 
 		return view('games.game', compact('game'));
 	}
