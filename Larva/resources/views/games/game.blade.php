@@ -3,7 +3,7 @@
 
 <link href="/css/GamePageCss.css" rel="stylesheet">
 
-<div id="GameTitle"></div>
+<div id="GameTitle">{{ $game->title }}</div>
 
 <div id="GameObject">
     <div id="Game">
@@ -11,7 +11,7 @@
         <object classid="clsid:444785F1-DE89-4295-863A-D46C3A781394"
                 codebase="http://webplayer.unity3d.com/download_webplayer/UnityWebPlayer.cab#version=2,0,0,0" height="450"
                 id="UnityObject" width="600"> <param name="https://drive.google.com/uc?export=download&id=0B5QltOX_3PRWbjdkc3R0ZEo3aVk" value="WebPlayer.unity3d" />
-            <embed id="UnityEmbed" src="/WebPlayer.unity3d"
+            <embed id="UnityEmbed" src={{ $game->file_Location }}
                    width="480" height="320" type="application/vnd.unity"
                    pluginspage="http://www.unity3d.com/unity-web-player-2.x" />
         </object>
@@ -69,7 +69,7 @@
             </div>
             <div id="Desc" class="tab-pane fade">
                 <h3>Description</h3>
-                <p>Sorry we can't seem to find any Description for the game on the server right now, please try again later :(</p>
+                <p>{{ $game->description }}</p>
             </div>
             <div id="Awards" class="tab-pane fade">
                 <h3>Awards</h3>
