@@ -5,9 +5,11 @@ Once db integration happens there will be info here
 <div class="gamesContainer">
     @foreach($games as $game)
 
+        <br/>
+
         <div class="game" border="2px">
-            {{ $game->title }} <br/>
-            {{ $game->description }}<br/>
+            <h4>{{ $game->title }}</h4>
+            <p>{{ $game->description }}</p>
         </div>
 
         <br/>

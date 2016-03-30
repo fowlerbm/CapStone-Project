@@ -29,10 +29,6 @@ class GamesController extends Controller {
 	{
 		//
 	}
-	/**
-	{
-		//
-	}
 
 	/**
 	 * Store a newly created resource in storage.
@@ -53,7 +49,6 @@ class GamesController extends Controller {
 	public function show($id)
 	{
 		//
-        return view('games.game');
 	}
 
 	/**
