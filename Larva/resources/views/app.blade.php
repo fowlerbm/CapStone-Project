@@ -49,9 +49,12 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    @include('Partials.search')
-                </li>
+               <li>
+                    {{-- @include('Partials.search')  --}} <!-- this is not something to want to include here for a search
+                                                                you should send it to a url like localhost:8080/searchGames/"searchTerm"
+                                                                and let a route send it to a Search results page containing like matchs
+                                                                   besides that this breaks everything-->
+               </li>
                 @if (Auth::guest())
                     <li><a href="{{ url('/auth/login') }}" rel="modal_trigger">Login</a></li>
                     <li><a href="{{ url('/auth/register') }}">Register</a></li>
