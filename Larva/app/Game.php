@@ -14,4 +14,14 @@ class Game extends Model {
         'file_Location',
     ];
 
+    public function tags()
+    {
+        return $this->belongsToMany('App\Tag')->withTimestamps();
+    }
+
+    public function getTagListAttribute()
+    {
+        return $this->tags->lists('id');
+    }
+
 }

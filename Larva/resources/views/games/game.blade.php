@@ -27,19 +27,17 @@
     <!-- line for tags -->
     <div id="GameTags">
         <ul id="TagList">        <!-- list for tags -->
-            <li>Unknown Tag</li>
-            <li>Unknown Tag</li>
-            <li>Unknown Tag</li>
-            <li>Unknown Tag</li>
-            <li>Unknown Tag</li>
+            <!-- foreach for tags here -->
+
         </ul>
     </div>
 
+    @include('Partials.rating')
+
     <!-- options line ie - favorite button , rating stars -->
     <div id="GameUserOptions">
-        <ul id="OptionsList">        <!-- list for tags -->
+        <ul id="OptionsList">
             <li><a href="#">Favorite Game</a></li>
-            <li>Rating:<a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a></li>
         </ul>
     </div>
 

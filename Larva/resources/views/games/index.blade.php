@@ -7,7 +7,7 @@
         <br/>
 
         <div class="game" style="border:1px solid black;">
-            <h4>{{ $game->title }}</h4>
+            <h4><a href="{{ url('/games', $game->game_id) }}">{{ $game->title }}</a></h4>
             <p>{{ $game->description }}</p>
         </div>
 
