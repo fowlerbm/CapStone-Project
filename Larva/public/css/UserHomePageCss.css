@@ -12,7 +12,7 @@
 
 #UserFeed
 {
-    border: 1px dotted #bababa;
+
     display: block;
     float: left;
     width: 70%;
@@ -22,13 +22,7 @@
 {
 
     width: 30%;
-    float: right;
-    display: block;
-    border: 1px dotted #bababa;
-}
-
-.container
-{
-
     float: left;
+    display: block;
+
 }

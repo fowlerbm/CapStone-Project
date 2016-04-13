@@ -1,0 +1,13 @@
+#All{
+    display: block;
+    margin: 0 1em 0 1em;
+    width: 70%;
+    float: left;
+}
+#TagBar{
+    display: block;
+    margin: 0 1em 0 1em;
+    width: 25%;
+    float: left;
+
+}
