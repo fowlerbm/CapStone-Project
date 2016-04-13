@@ -17,11 +17,13 @@ class Achievements extends Migration {
             $table->string('name');
             $table->string('description');
             $table->integer('point_value');
-            $table->string('icon_id');
             $table->timestamps();
+
             $table->integer('game_id');
+			$table->integer('icon');
 
             $table->foreign('game_id')->references('game_id')->on('user');
+			$table->foreign('icon')->references('icon_id')->on('icons');
         });
 	}
 

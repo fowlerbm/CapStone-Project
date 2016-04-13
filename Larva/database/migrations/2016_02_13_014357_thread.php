@@ -15,11 +15,15 @@ class Thread extends Migration {
         Schema::create('thread', function (Blueprint $table) {
             $table->increments('thread_id');
             $table->string('title');
-            $table->string('posts');
-            $table->string('sticky');
-            $table->string('locked');
-            $table->string('game');
+            $table->boolean('sticky');
+            $table->boolean('locked');
             $table->timestamps();
+
+			$table->integer('game');
+
+			$table->foreign('game')->references('game_id')->on('game');
+
+			//$table->string('posts'); - Not sure what this is for
         });
 	}
 

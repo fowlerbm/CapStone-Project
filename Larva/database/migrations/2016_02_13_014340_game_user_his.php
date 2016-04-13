@@ -16,6 +16,7 @@ class GameUserHis extends Migration {
             {
                 $table->increments('his_id');
                 $table->timestamps();
+
                 $table->integer('user_id');
                 $table->integer('game_id');
 

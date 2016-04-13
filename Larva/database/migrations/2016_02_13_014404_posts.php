@@ -15,8 +15,9 @@ class Posts extends Migration {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('post_id');
             $table->string('content');
-            $table->string('flagged');
+            $table->boolean('flagged');
             $table->timestamps();
+
             $table->integer('thread_id');
             $table->integer('user_id');
 

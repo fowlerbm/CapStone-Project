@@ -7,7 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Achievements' => $baseDir . '/database/migrations/2016_02_13_014430_achievements.php',
-    'CreateGamesTable' => $baseDir . '/database/migrations/2016_03_11_002757_create_games_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
@@ -18,6 +17,7 @@ return array(
     'GameUserFav' => $baseDir . '/database/migrations/2016_02_13_014333_game_user_fav.php',
     'GameUserHis' => $baseDir . '/database/migrations/2016_02_13_014340_game_user_his.php',
     'GameUserRating' => $baseDir . '/database/migrations/2016_02_13_014417_game_user_rating.php',
+    'Icons' => $baseDir . '/database/migrations/2016_04_12_185017_icons.php',
     'IlluminateQueueClosure' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
     'PHPUnit_Exception' => $vendorDir . '/phpunit/phpunit/src/Exception.php',
     'PHPUnit_Extensions_GroupTestSuite' => $vendorDir . '/phpunit/phpunit/src/Extensions/GroupTestSuite.php',
@@ -429,6 +429,7 @@ return array(
     'SebastianBergmann\\RecursionContext\\InvalidArgumentException' => $vendorDir . '/sebastian/recursion-context/src/InvalidArgumentException.php',
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'SessionHandlerInterface' => $vendorDir . '/symfony/http-foundation/Symfony/Component/HttpFoundation/Resources/stubs/SessionHandlerInterface.php',
+    'Tags' => $baseDir . '/database/migrations/2016_04_12_181157_tags.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/Text/Template.php',
     'Thread' => $baseDir . '/database/migrations/2016_02_13_014357_thread.php',

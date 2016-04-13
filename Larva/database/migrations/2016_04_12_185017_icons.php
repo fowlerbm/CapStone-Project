@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGamesTable extends Migration {
+class Icons extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,11 @@ class CreateGamesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('games', function(Blueprint $table)
+		Schema::create('icons', function (Blueprint $table)
 		{
-			$table->increments('id');
+			$table->increments('icon_id');
+			//$table->string('icon_type');
+			$table->string('icon_path');
 			$table->timestamps();
 		});
 	}
@@ -26,7 +28,7 @@ class CreateGamesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('games');
+		Schema::drop('icons');
 	}
 
 }

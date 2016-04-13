@@ -15,6 +15,7 @@ class GameUserRating extends Migration {
         Schema::create('game_user_rating', function (Blueprint $table) {
             $table->increments('rate_id');
             $table->timestamps();
+
             $table->integer('user_id');
             $table->integer('rating');
             $table->integer('game_id');

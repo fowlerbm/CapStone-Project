@@ -16,6 +16,7 @@ class GameUserFav extends Migration {
         {
             $table->increments('fav_id');
             $table->timestamps();
+
             $table->integer('user_id');
             $table->integer('game_id');
 
