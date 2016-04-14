@@ -17,6 +17,7 @@ class Game extends Migration {
             $table->increments('game_id');
             $table->string('title');
             $table->string('description');
+            $table->string('instructions');
             $table->string('image_path');
             $table->string('file_Location');
             $table->timestamps();

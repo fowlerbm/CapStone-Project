@@ -1,0 +1,17 @@
+#ForumHeader
+{
+    width: 99%;
+    height: auto;
+    display: block;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center ;
+}
+
+#ForumImage{
+
+    margin-left: auto;
+    margin-right: auto;
+}

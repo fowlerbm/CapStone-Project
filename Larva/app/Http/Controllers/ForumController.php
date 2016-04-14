@@ -4,12 +4,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use App\Game;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Input;
 
-
-class SearchController extends Controller {
+class ForumController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -18,11 +14,7 @@ class SearchController extends Controller {
 	 */
 	public function index()
 	{
-		$search = Input::get('search');
-
-		$result = DB::table('game')->where('title', $search);
-
-		return view('search.results', compact('result'));
+		return view('Forum.ForumIndex');
 	}
 
 	/**

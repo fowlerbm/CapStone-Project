@@ -25,6 +25,10 @@
 
     <script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
 
+    <!-- for the rating bar -->
+    <script type="text/javascript" src="{{ asset("js/game.js") }}"></script>
+    <link href="{{ asset('/css/rating.css') }}" rel="stylesheet">
+
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -44,7 +48,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="{{ url('/user') }}">User</a></li>
                 <li><a href="{{ url('/games') }}">Games</a></li>
-                <li><a href="{{ url('#') }}">Forums</a></li>
+                <li><a href="{{ url('/forum') }}">Forums</a></li>
                 <li><a href="{{ url('/games/1') }}">Random</a></li>
             </ul>
 

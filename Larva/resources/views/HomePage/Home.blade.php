@@ -5,23 +5,19 @@
 
 <div>
 
-
-
     <div id="Featured">
-        This is where the featured games will go <br>
-        and here<br>
-        and here<br>
-        and here<br>
-        and here<br>
-    </div>
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#Featured">Featured Games</a></li>
+            </ul>
 
-    <div>
-        <div id="TopPlayers">
-            This is where the Top Players will go<br>
-            and here<br>
-            and here<br>
-            and here<br>
-            and here<br>
+            <div class="tab-content">
+                <div id="Featured" class="tab-pane fade in active">
+                    <h3>High Scoring users</h3>
+                    <p>Sorry we can't seem to find any Games</br>
+                        on the server right now, please try again later :(</p>
+                </div>
+            </div>
         </div>
     </div>
 

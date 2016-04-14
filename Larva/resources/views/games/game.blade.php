@@ -21,25 +21,26 @@
 <div id="GameInfo">
     <!-- write the title -->
     <div id="GameTitle">
-        <h3>{{ $game->title  }}</h3>
+        <a href="{{ url("/games", $game->game_id) }}">
+            <h3>{{ $game->title  }}</h3>
+        </a>
     </div>
 
     <!-- line for tags -->
     <div id="GameTags">
         <ul id="TagList">        <!-- list for tags -->
-            <li>Unknown Tag</li>
-            <li>Unknown Tag</li>
-            <li>Unknown Tag</li>
-            <li>Unknown Tag</li>
-            <li>Unknown Tag</li>
+            <!-- foreach for tags here -->
+
         </ul>
     </div>
 
+
+
     <!-- options line ie - favorite button , rating stars -->
     <div id="GameUserOptions">
-        <ul id="OptionsList">        <!-- list for tags -->
+        <ul id="OptionsList">
             <li><a href="#">Favorite Game</a></li>
-            <li>Rating:<a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a></li>
+            @include('Partials.rating')
         </ul>
     </div>
 

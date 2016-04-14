@@ -1,5 +1,6 @@
 @include('app')
 
+
 <link href="/css/UserHomePageCss.css" rel="stylesheet">
 
 <div id="EventHeader">
@@ -39,10 +40,12 @@
             <div class="tab-content">
                 <div id="UserScores" class="tab-pane fade in active">
                     <h3>High Scoring users</h3>
-                    <p>Sorry we can't seem to find any users on the server right now, please try again later :(</p>
+                    <p>Sorry we can't seem to find any user</br>
+                        on the server right now, please try again later :(</p>
                 </div>
             </div>
         </div>
     </div>
 
 </div>
+
