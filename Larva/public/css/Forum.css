@@ -10,8 +10,94 @@
     text-align: center ;
 }
 
-#ForumImage{
+#CreateLink
+{
+    padding: 1em;
+    background-color: #bababa;
+    text-decoration-color: #ffffff;
+    border-radius: 5px;
+}
+
+#NewThread
+{
+    padding: 1em;
+    width: 99%;
+    float: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center ;
+}
+
+#ForumImage
+{
 
     margin-left: auto;
     margin-right: auto;
 }
+
+#ForumContainer
+{
+    width: 99%;
+    float: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Thread
+{
+    border: 1px solid #5e5e5e;
+    border-radius: 5px;
+    padding: 2em;
+    margin: 1em 1em 1em 1em;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#PostForm{
+    width: 99%;
+    float: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center ;
+}
+
+#ThreadInfo{
+    width: 99%;
+    float: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center ;
+}
+
+#ThreadContainer
+{
+    width: 99%;
+    float: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center ;
+}
+
+#Post
+{
+    border: 1px solid #5e5e5e;
+    border-radius: 5px;
+    padding: 2em;
+    margin: 1em 1em 1em 1em;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+

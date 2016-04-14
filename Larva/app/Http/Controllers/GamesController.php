@@ -49,8 +49,8 @@ class GamesController extends Controller {
 	public function show($id)
 	{
 		$game = Game::findOrFail($id);
-
-		return view('games.game', compact('game'));
+return view('Forum.ForumIndex');
+		//return view('games.game', compact('game'));
 	}
 
 	/**

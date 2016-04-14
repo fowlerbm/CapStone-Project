@@ -24,7 +24,7 @@ class ForumController extends Controller {
 	 */
 	public function create()
 	{
-		//
+        return view('Forum.ThreadCreatePage');
 	}
 
 	/**
@@ -45,7 +45,7 @@ class ForumController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+        return view('Forum.Thread');
 	}
 
 	/**
