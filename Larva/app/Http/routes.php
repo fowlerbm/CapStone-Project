@@ -21,6 +21,8 @@ Route::resource('user', 'UserController');
 
 Route::resource('games', 'GamesController');
 
+Route::resource('addGames', 'AddGamesController');
+
 Route::resource('search', 'SearchController');
 
 Route::controllers([
