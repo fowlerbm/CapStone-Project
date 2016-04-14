@@ -48,7 +48,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="{{ url('/user') }}">User</a></li>
                 <li><a href="{{ url('/games') }}">Games</a></li>
-                <li><a href="{{ url('#') }}">Forums</a></li>
+                <li><a href="{{ url('/forum') }}">Forums</a></li>
                 <li><a href="{{ url('/games/1') }}">Random</a></li>
             </ul>
 

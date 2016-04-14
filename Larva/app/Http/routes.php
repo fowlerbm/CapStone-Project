@@ -23,6 +23,9 @@ Route::resource('games', 'GamesController');
 
 Route::resource('search', 'SearchController');
 
+Route::resource('forum', 'ForumController');
+
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

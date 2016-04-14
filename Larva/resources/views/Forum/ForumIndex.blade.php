@@ -1,5 +1,5 @@
 @include('app')
 
 <div id="ForumHeader">
-    <img src="LeetStreetForum.png"/>
+    <img src="/StreetSignForum.png"/>
 </div>

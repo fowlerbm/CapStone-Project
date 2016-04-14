@@ -1,4 +1,4 @@
-<div id="ratingBar">
+<div id="RatingBar">
     <fieldset id='demo1' class="rating">
         <input class="stars" type="radio" id="star5" name="rating" value="5" />
         <label class = "full" for="star5" title="Awesome - 5 stars"></label>

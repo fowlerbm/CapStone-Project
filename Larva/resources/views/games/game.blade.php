@@ -32,12 +32,13 @@
         </ul>
     </div>
 
-    @include('Partials.rating')
+
 
     <!-- options line ie - favorite button , rating stars -->
     <div id="GameUserOptions">
         <ul id="OptionsList">
             <li><a href="#">Favorite Game</a></li>
+            @include('Partials.rating')
         </ul>
     </div>
 
