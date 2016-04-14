@@ -4,7 +4,9 @@ use App\Game;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class GamesController extends Controller {
 
@@ -15,9 +17,17 @@ class GamesController extends Controller {
 	 */
 	public function index()
 	{
-		$games = Game::all();
+        if(Input::get('date') == 'date')
+        {
+            $games = Game::orderBy('created_at' , 'desc')->get();
+        }
+        else{
+            $games = Game::all();
+        }
 
-        return view('games.index', compact('games'));
+        $tags = Tag::all();
+
+        return view('games.index', compact('games' , 'tags'));
 	}
 
 	/**
@@ -49,8 +59,8 @@ class GamesController extends Controller {
 	public function show($id)
 	{
 		$game = Game::findOrFail($id);
-return view('Forum.ForumIndex');
-		//return view('games.game', compact('game'));
+
+		return view('games.game', compact('game'));
 	}
 
 	/**

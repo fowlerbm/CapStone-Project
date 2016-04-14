@@ -11,7 +11,7 @@
 
         <div class="tab-content">
             <div id="All" class="tab-pane fade in active">
-                <h3>All Games</h3>
+                <h3>All Games</h3> <form method="get" action="/games"> <input type="hidden" name="date" value="date">  <input type="submit" value="Order By Date" ></form>
 
                 <!-- page for browsing games-->
                 <div class="gamesContainer">
@@ -49,8 +49,20 @@
             <div id="Tags" class="tab-pane fade in active">
                 <h3>Categories</h3>
 
-                <p>Sorry we can't seem to find any Categories</br>
-                    on the server right now, please try again later :(</p>
+                @foreach($tags as $tag)
+
+                    <br/>
+
+                    <div class="Tag" style="border:1px solid black;">
+                        <a href="{{ url("/tag", $tag->name) }}">
+                            <h4>{{ $tag->name}}</h4>
+                        </a>
+                    </div>
+
+                    <br/>
+
+                @endforeach
+
             </div>
         </div>
     </div>

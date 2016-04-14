@@ -8,6 +8,13 @@
 
     <link rel="stylesheet" type="text/css" href="../css/HomePage.css">
 
+    <div id="RecentGames">
+        <!-- pull list of users most recently played games -->
+        <div id="Game">
+
+        </div>
+    </div>
+
 
     <div id="Featured">
         <div class="container">
@@ -43,15 +50,15 @@
         </div>
     </div>
 
-    <div id="Top">
+    <div id="New">
         <div class="container">
             <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#Top">Top Games</a></li>
+                <li class="active"><a data-toggle="tab" href="#New">New Games</a></li>
             </ul>
 
             <div class="tab-content">
-                <div id="Top" class="tab-pane fade in active">
-                    <h3>Popular Games</h3>
+                <div id="New" class="tab-pane fade in active">
+                    <h3>New Games</h3>
                     <p>Sorry we can't seem to find any Games</br>
                         on the server right now, please try again later :(</p>
                 </div>
