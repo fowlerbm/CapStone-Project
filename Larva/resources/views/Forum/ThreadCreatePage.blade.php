@@ -6,3 +6,11 @@
 <div id="ForumHeader">
     <img id="ForumImage" src="/StreetSignForum.png" width="600em"/>
 </div>
+
+
+<div id="ThreadData">
+
+    <!-- Forum form  -->
+
+
+</div>
