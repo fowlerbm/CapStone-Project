@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration {
 			$table->string('password', 60);
             $table->integer('achievement_Score')->nullable();
             $table->boolean('admin')->nullable();
+			$table->string('about_me')->nullable();
 			$table->rememberToken();
 			$table->timestamps();
 

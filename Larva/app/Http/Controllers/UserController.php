@@ -56,4 +56,19 @@ class UserController extends Controller
         return view('users.Profile', compact('user'));
     }
 
+    public function edit($id)
+    {
+        $user = User::findOrFail($id);
+
+        return view('users.edit', compact('user'));
+    }
+
+
+    public function update(User $user)
+    {
+        $user->update();
+
+        return redirect( url("/user", $user->user_id) );
+    }
+
 }

@@ -10,7 +10,7 @@
         <p>Description:</p>
         <input id="Description" name="Description" type="text">
         </br>
-        <p>Image LInk:</p>
+        <p>Image Link:</p>
         <input id="ImageLink" name="Image Link" type="text">
         </br>
         <p>Link to game:</p>
