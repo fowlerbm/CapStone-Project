@@ -20,7 +20,7 @@ class SearchController extends Controller {
 	{
 		$search = Input::get('search');
 
-		$result = DB::table('game')->where('title', $search)->first();
+		$result = DB::table('game')->where('title', $search);
 
 		return view('search.results', compact('result'));
 	}

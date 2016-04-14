@@ -20,7 +20,7 @@
                         <br/>
 
                         <div class="game" style="border:1px solid black;">
-                            <a href="{{ asset("/games", $game->game_id) }}">
+                            <a href="{{ url("/games", $game->game_id) }}">
                                 <h4>{{ $game->title }}</h4>
                             </a>
                             <p>{{ $game->description }}</p>

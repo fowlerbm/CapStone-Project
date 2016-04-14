@@ -17,6 +17,8 @@ class Thread extends Migration {
             $table->string('title');
             $table->boolean('sticky');
             $table->boolean('locked');
+			$table->boolean('hidden');
+			$table->boolean('flagged');
             $table->timestamps();
 
 			$table->integer('game');

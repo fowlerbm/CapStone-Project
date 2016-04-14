@@ -21,7 +21,9 @@
 <div id="GameInfo">
     <!-- write the title -->
     <div id="GameTitle">
-        <h3>{{ $game->title  }}</h3>
+        <a href="{{ url("/games", $game->game_id) }}">
+            <h3>{{ $game->title  }}</h3>
+        </a>
     </div>
 
     <!-- line for tags -->
