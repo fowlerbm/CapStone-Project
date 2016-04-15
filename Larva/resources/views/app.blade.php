@@ -20,8 +20,6 @@
 
     <!--Jquery pop up scripts -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-    <script src="{{ asset('js/jquery.leanModal.min.js') }}"></script>
-    <link rel="stylesheet" type="text/css" href="css/loginForm.css">
 
     <script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
 
