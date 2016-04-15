@@ -30,6 +30,7 @@
 
 ul#TagList
 {
+
     padding: 1em;
 }
 
@@ -48,6 +49,7 @@ ul#TagList li {
 
 ul#DetailList
 {
+    margin-top: 3em;
     padding: 1em;
 }
 
@@ -56,11 +58,12 @@ ul#DetailList li {
 }
 
 ul#DetailList li {
-    background-color: #000000;
+    background-color: green;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 4px;
+
 }
 
 
@@ -71,21 +74,24 @@ ul#OptionsList
 }
 
 ul#OptionsList li {
+
     display: inline;
 }
 
-ul#OptionsList li {
+ul#OptionsList li .Fav {
     background-color: red;
     color: white;
+    float: left;
     padding: 10px 10px;
     text-decoration: none;
     border-radius: 4px;
 }
 
 #RatingBar {
-
+    background-color: green;
+    float: left;
     color: white;
-    padding: 10px 10px 10px 10px;
+    padding: 1px 1px 1px 1px;
     text-decoration: none;
     border-radius: 4px;
 }

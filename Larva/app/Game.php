@@ -12,11 +12,12 @@ class Game extends Model {
         'description',
         'image_location',
         'file_Location',
+        'tags',
     ];
 
     public function tags()
     {
-        return $this->belongsToMany('App\Tag');
+        return $this->tags;
     }
 
     public function getTagListAttribute()

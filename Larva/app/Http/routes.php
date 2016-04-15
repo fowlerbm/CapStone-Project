@@ -30,6 +30,8 @@ Route::resource('forum', 'ForumController');
 Route::resource('random', 'RandomController');
 
 
+
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
