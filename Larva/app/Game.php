@@ -28,4 +28,8 @@ class Game extends Model {
         return $this->tags->lists('id');
     }
 
+    public function author()
+    {
+        return $this->author;
+    }
 }

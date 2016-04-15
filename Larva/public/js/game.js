@@ -5,9 +5,12 @@
 //Javascript for things like getting achievements and rating system, etc.
 
 $(document).ready(function () {
-    $("#demo1 .stars").click(function () {
+    var gameId = $('#gameId').val().trim();
 
-        $.post('rating.php',{rate:$(this).val()},function(d){
+
+    $(document).on("click", "#demo1 .stars", function () {
+
+        $.post('/rating/' + gameId,{rate:$(this).val()},function(d){
             if(d>0)
             {
                 alert('You already rated');

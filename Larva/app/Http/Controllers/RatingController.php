@@ -1,15 +1,14 @@
 <?php namespace App\Http\Controllers;
 
+use App\Game;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Input;
+use willvincent\Rateable\Rating;
 
-class TagsController extends Controller {
+class RatingController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -18,9 +17,7 @@ class TagsController extends Controller {
 	 */
 	public function index()
 	{
-		$tags = Tag::All();
-
-		//view of all tags and some games under each
+		//
 	}
 
 	/**
@@ -44,17 +41,23 @@ class TagsController extends Controller {
 	}
 
 	/**
-	 * Display the specified resource.
+	 * Rate the specified Game.
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function Rate($id)
 	{
+		if (isset($_POST['rate']) && !empty($_POST['rate']))
+		{
+			$game = Game::findOrFail($id);
 
-		$game = DB::table('game')->where('tags', $id)->get();
+			$rating = new Rating;
+			$rating->rating = $_POST['rate'];
+			$rating->user_id = Auth::user()->user_id;
 
-		return view('Tags.TagGames' , compact('game'));
+			$game->ratings()->save($rating);
+		}
 	}
 
 	/**
