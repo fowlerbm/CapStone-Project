@@ -22,7 +22,6 @@
 
         <input name="Submit" type="submit" text="Submit" id="subGame" onclick="return confirm('Are You sure you want to add this game? ' +
          'No changes can be made after submission')"></br>
-        <p>*Please note it may take several business days for an admin to look over your
-        proposed game.</p>
+
     </form>
 </div>
