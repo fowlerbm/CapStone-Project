@@ -7,6 +7,17 @@
     <h2>{{ $game->title }}</h2>
 </div>
 
+@if (Auth::guest())
+
+
+@else
+    @if(Auth::user()->admin == true)
+        <form method="DELETE" action="/games/{{$game->game_id}} ">
+            <input type="submit" value="Delete Game" >
+        </form>
+    @endif
+@endif
+
 <div id="GameObject">
     <div id="Game">
         <!-- unity web player -->

@@ -71,5 +71,10 @@ class UserController extends Controller
 
         return redirect( url("/user", $user->user_id) );
     }
+    public function destroy($id)
+    {
+        $user = User::findOrFail($id);
+        $user->distroy;
+    }
 
 }

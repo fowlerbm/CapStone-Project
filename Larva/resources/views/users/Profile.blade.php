@@ -12,7 +12,7 @@
 
 @else
     @if(Auth::user()->admin == true)
-        <form method="DELETE" action="/user/{{$user->user_id}} ">
+        <form method="delete" action="/user/{{$user->user_id}} ">
             <input type="submit" value="Delete Profile" >
         </form>
     @endif
