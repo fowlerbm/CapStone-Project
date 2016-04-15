@@ -136,6 +136,7 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
         'Illuminate\Html\HtmlServiceProvider',
+		willvincent\Rateable\RateableServiceProvider::class,
 
 		/*
 		 * Application Service Providers...

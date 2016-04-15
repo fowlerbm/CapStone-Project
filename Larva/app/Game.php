@@ -1,8 +1,11 @@
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use willvincent\Rateable\Rateable;
 
 class Game extends Model {
+
+    use Rateable;
 
 	protected $primaryKey = "game_id";
     protected $table = "game";

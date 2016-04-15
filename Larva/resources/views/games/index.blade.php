@@ -57,7 +57,7 @@
                     <br/>
 
                     <div class="Tag" style="border:1px solid black;">
-                        <a href="{{ url("/tag", $tag->name) }}">
+                        <a href="{{ url("/tag", $tag->tag_id) }}">
                             <h4>{{ $tag->name}}</h4>
                         </a>
                     </div>

@@ -19,9 +19,9 @@ class SearchController extends Controller {
 	public function index()
 	{
 		$search = Input::get('search');
-		$result = DB::table('game')->where('title',  $search);
-        $TagResults = DB::table('tags')->where('name',  $search);
-        $UserResults = DB::table('users')->where('username',  $search);
+		$result = DB::table('game')->where('title',  $search)->get();
+        $TagResults = DB::table('tags')->where('name',  $search)->get();
+        $UserResults = DB::table('users')->where('username',  $search)->get();
 
         return view('search.results', compact('result' , 'TagResults' , 'UserResults'));
 	}
