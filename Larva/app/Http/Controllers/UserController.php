@@ -32,7 +32,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('users.UserHome');
+        $users = User::all()->take(5);
+        return view('users.UserHome' , compact('users'));
     }
 
 

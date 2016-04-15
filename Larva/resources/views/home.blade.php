@@ -25,8 +25,20 @@
             <div class="tab-content">
                 <div id="Featured" class="tab-pane fade in active">
                     <h3>Featured Games</h3>
-                    <p>Sorry we can't seem to find any Games</br>
-                        on the server right now, please try again later :(</p>
+                    @foreach($FeatGames as $game)
+
+
+
+                        <div id="Game" style="border:1px solid black;">
+                            <a href="{{ url("/games", $game->game_id) }}">
+                                <h4>{{ $game->title }}</h4>
+                            </a>
+                            <p>{{ $game->description }}</p>
+                        </div>
+
+
+
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -43,8 +55,21 @@
             <div class="tab-content">
                 <div id="Popular" class="tab-pane fade in active">
                     <h3>Popular Games</h3>
-                    <p>Sorry we can't seem to find any Games</br>
-                        on the server right now, please try again later :(</p>
+                    @foreach($games as $game)
+
+
+
+                        <div id="Game" style="border:1px solid black;">
+                            <a href="{{ url("/games", $game->game_id) }}">
+                                <h4>{{ $game->title }}</h4>
+                            </a>
+                            <p>{{ $game->description }}</p>
+                        </div>
+
+
+
+                    @endforeach
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,8 +84,20 @@
             <div class="tab-content">
                 <div id="New" class="tab-pane fade in active">
                     <h3>New Games</h3>
-                    <p>Sorry we can't seem to find any Games</br>
-                        on the server right now, please try again later :(</p>
+                    @foreach($NewGames as $game)
+
+
+
+                        <div id="Game" style="border:1px solid black;">
+                            <a href="{{ url("/games", $game->game_id) }}">
+                                <h4>{{ $game->title }}</h4>
+                            </a>
+                            <p>{{ $game->description }}</p>
+                        </div>
+
+
+
+                    @endforeach
                 </div>
             </div>
         </div>

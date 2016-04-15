@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 
 class TagsController extends Controller {
 
@@ -49,11 +51,10 @@ class TagsController extends Controller {
 	 */
 	public function show($id)
 	{
-		$tag = Tag::find($id);
 
-		$games = $tag->games();
+		$game = DB::table('game')->where('tags', $id)->get();
 
-		//return view with specific tag games
+		return view('Tags.TagGames' , compact('game'));
 	}
 
 	/**

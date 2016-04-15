@@ -20,3 +20,17 @@
     width: 40%;
     float: left;
 }
+
+#Game
+{
+    display: block;
+    float: left;
+    width: 7em;
+    height: 7em;
+    margin: 10px;
+}
+
+
+
+
+

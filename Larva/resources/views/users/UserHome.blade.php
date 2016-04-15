@@ -20,7 +20,7 @@
             <div class="tab-content">
                 <div id="News" class="tab-pane fade in active">
                     <h3>News</h3>
-                    <p>Sorry we can't seem to find any News on the server right now, please try again later :(</p>
+                    <p>The Site is now launched! welcome to the site to can now play our unity games on this site</p>
                 </div>
                 <div id="Chat" class="tab-pane fade">
                     <h3>Chat</h3>
@@ -40,8 +40,19 @@
             <div class="tab-content">
                 <div id="UserScores" class="tab-pane fade in active">
                     <h3>High Scoring users</h3>
-                    <p>Sorry we can't seem to find any user</br>
-                        on the server right now, please try again later :(</p>
+                    @foreach($users as $user)
+
+
+
+                        <div id="Game" style="border:1px solid black;">
+                            <a href="{{ url("/user/", $user->user_id) }}">
+                                <h4>{{ $user->username }}</h4>
+                            </a>
+                        </div>
+
+
+
+                    @endforeach
                 </div>
             </div>
         </div>

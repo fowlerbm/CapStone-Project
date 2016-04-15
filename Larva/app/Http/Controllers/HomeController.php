@@ -31,9 +31,10 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-        $games = Game::all();
+        $games = Game::all()->take(20);
         $NewGames =  Game::all()->reverse()->take(5) ;
-		return view('home');
+        $FeatGames =  Game::all()->take(5) ;
+		return view('home' , compact('games' , 'NewGames' , 'FeatGames'));
 	}
 
 

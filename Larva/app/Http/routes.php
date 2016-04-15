@@ -29,6 +29,7 @@ Route::resource('forum', 'ForumController');
 
 Route::resource('random', 'RandomController');
 
+Route::resource('tag', 'TagsController');
 
 
 
