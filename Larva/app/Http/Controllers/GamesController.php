@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 
 use App\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 
 class GamesController extends Controller {
@@ -17,13 +18,12 @@ class GamesController extends Controller {
 	 */
 	public function index()
 	{
+        $games = Game::all();
         if(Input::get('date') == 'date')
         {
-            $games = Game::orderBy('created_at' , 'desc')->get();
+            $games = $games->reverse();
         }
-        else{
-            $games = Game::all();
-        }
+
 
         $tags = Tag::all();
 
@@ -59,8 +59,10 @@ class GamesController extends Controller {
 	public function show($id)
 	{
 		$game = Game::findOrFail($id);
+        $query = $game->tags;
+        $tag = Tag::findOrFail($query);
 
-		return view('games.game', compact('game'));
+		return view('games.game', compact('game' , 'tag'));
 	}
 
 	/**

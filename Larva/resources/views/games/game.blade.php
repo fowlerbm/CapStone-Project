@@ -29,8 +29,7 @@
     <!-- line for tags -->
     <div id="GameTags">
         <ul id="TagList">        <!-- list for tags -->
-            <!-- foreach for tags here -->
-
+               <li> {{ $tag->name }}</li>
         </ul>
     </div>
 
@@ -39,8 +38,9 @@
     <!-- options line ie - favorite button , rating stars -->
     <div id="GameUserOptions">
         <ul id="OptionsList">
-            <li><a href="#">Favorite Game</a></li>
-            @include('Partials.rating')
+            <li><a href="#" class="Fav">Favorite Game</a>  </li>
+           <li>@include('Partials.rating')</li>
+
         </ul>
     </div>
 

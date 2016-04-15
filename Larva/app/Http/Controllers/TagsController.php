@@ -1,14 +1,13 @@
 <?php namespace App\Http\Controllers;
 
-use App\Game;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Tag;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Auth;
 
-class RandomController extends Controller {
+class TagsController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -17,11 +16,9 @@ class RandomController extends Controller {
 	 */
 	public function index()
 	{
-		$count = Game::all()->count();
+		$tags = Tag::All();
 
-        $rand = rand(0, $count);
-
-        return Redirect::to(url('/games', $rand));
+		//view of all tags and some games under each
 	}
 
 	/**
@@ -52,7 +49,11 @@ class RandomController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$tag = Tag::find($id);
+
+		$games = $tag->games();
+
+		//return view with specific tag games
 	}
 
 	/**
