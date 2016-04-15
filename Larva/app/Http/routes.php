@@ -13,7 +13,7 @@
 
 //final test
 
-//Route::get('/', 'WelcomeController@index');
+Route::get('/', 'HomeController@index');
 
 Route::resource('home', 'HomeController');
 

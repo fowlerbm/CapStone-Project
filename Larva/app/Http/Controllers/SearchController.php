@@ -19,16 +19,17 @@ class SearchController extends Controller {
 	public function index()
 	{
 		$search = Input::get('search');
+		$result = DB::table('game')->where('title',  $search);
+        $TagResults = DB::table('tags')->where('name',  $search);
+        $UserResults = DB::table('users')->where('username',  $search);
 
-		$result = DB::table('game')->where('title', $search);
-
-		return view('search.results', compact('result'));
+        return view('search.results', compact('result' , 'TagResults' , 'UserResults'));
 	}
 
 	/**
 	 * Show the form for creating a new resource.
 	 *
-	 * @return Response
+	 * @return Response		return view('search.results', compact('result' , 'TagResults'));
 	 */
 	public function create()
 	{

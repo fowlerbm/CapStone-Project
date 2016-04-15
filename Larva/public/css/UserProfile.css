@@ -1,0 +1,52 @@
+#UserControl
+{
+    width: 99%;
+    display: block;
+    text-align: center ;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#TitleArea{
+display: block;
+    width: 99%;
+}
+
+.Name
+{
+    display: block;
+    float: left;
+}
+
+
+.Score
+{
+    display: block;
+    float: right;
+}
+
+#UserInfo
+{
+    width: 99%;
+    float: left;
+
+}
+
+#UserHistory
+{
+    width: 99%;
+    float: left;
+}
+
+#UserFavorites
+{
+    width: 99%;
+    float: left;
+}
+
+#UserUploads
+{    width: 99%;
+
+    float: left;
+}
