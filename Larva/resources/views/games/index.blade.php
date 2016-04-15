@@ -13,6 +13,7 @@
             <div id="All" class="tab-pane fade in active">
                 <h3>All Games</h3> <form method="get" action="/games"> <input type="hidden" name="date" value="date">  <input type="submit" value="Order By Date" ></form>
 
+                @if(!empty($games))
                 <!-- page for browsing games-->
                 <div class="gamesContainer">
                     @foreach($games as $game)
@@ -30,9 +31,11 @@
 
                     @endforeach
                 </div>
-
+                @else
                 <p>Sorry we can't seem to find any Games</br>
                     on the server right now, please try again later :(</p>
+                @endif
+
             </div>
         </div>
     </div>

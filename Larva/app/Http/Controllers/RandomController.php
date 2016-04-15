@@ -5,6 +5,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\URL;
 
 class RandomController extends Controller {
 
@@ -17,9 +19,9 @@ class RandomController extends Controller {
 	{
 		$count = Game::all()->count();
 
-        $url = '/game/' + rand(0, $count);
+        $rand = rand(0, $count);
 
-        return url($url);
+        return Redirect::to(url('/games', $rand));
 	}
 
 	/**

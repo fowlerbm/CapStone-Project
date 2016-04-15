@@ -27,6 +27,8 @@ Route::resource('search', 'SearchController');
 
 Route::resource('forum', 'ForumController');
 
+Route::resource('random', 'RandomController');
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
