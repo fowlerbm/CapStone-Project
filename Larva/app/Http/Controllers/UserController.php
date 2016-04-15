@@ -64,8 +64,9 @@ class UserController extends Controller
     }
 
 
-    public function update(User $user)
+    public function update($id)
     {
+        $user = User::findOrFail($id);
         $user->update();
 
         return redirect( url("/user", $user->user_id) );

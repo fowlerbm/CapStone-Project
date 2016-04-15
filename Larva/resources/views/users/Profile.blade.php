@@ -6,6 +6,19 @@
 <head>
     <title>{{ $user->username }}'s Profile</title>
 </head>
+
+@if (Auth::guest())
+
+
+@else
+    @if(Auth::user()->admin == true)
+        <form method="DELETE" action="/user/{{$user->user_id}} ">
+            <input type="submit" value="Delete Profile" >
+        </form>
+    @endif
+@endif
+
+
 @if (Auth::guest())
 
 
@@ -13,39 +26,41 @@
 @else
     @if(Auth::user()->username == $user->username)
         <div id="UserControl">
-            <form method="get" action="/user/{{$user->user_id}} ">
+            <form method="get" action="/user/{{$user->user_id}}/edit ">
                 <input type="submit" value="Edit Profile" >
             </form>
         </div>
     @endif
 @endif
 
-<div class="TitleArea">
-    <h2 class="Name">{{ $user->username }}'s Profile </h2>
+<div id="UserContainer">
+    <div class="TitleArea">
+        <h2 class="Name">{{ $user->username }}'s Profile </h2>
 
-    <h2 class="Score"> {{ $user->achievement_Score }} Achievement Score  </h2>
-</div>
+        <h2 class="Score"> {{ $user->achievement_Score }} Achievement Score  </h2>
+    </div>
 
-<div id="UserInfo">
-    <h2>About</h2>
+    <div id="UserInfo">
+        <h2>About</h2>
+        {{ $user->about_me }}
 
+    </div>
 
-</div>
+    <div id="UserHistory">
+        <h2>History</h2>
+        {{ $user->game_history }}
 
-<div id="UserHistory">
-    <h2>History</h2>
+    </div>
 
+    <div id="UserFavorites">
+        <h2>Favorites</h2>
+        {{ $user->favorite_game }}
 
-</div>
+    </div>
 
-<div id="UserFavorites">
-    <h2>Favorites</h2>
+    <div id="UserUploads">
+        <h2>Uploads</h2>
+        This user has uploaded nothing
 
-
-</div>
-
-<div id="UserUploads">
-    <h2>Uploads</h2>
-
-
+    </div>
 </div>

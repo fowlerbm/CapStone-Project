@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use App\Game;
+
 class HomeController extends Controller {
 
 	/*
@@ -29,6 +31,8 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
+        $games = Game::all();
+        $NewGames =  Game::all()->reverse()->take(5) ;
 		return view('home');
 	}
 
