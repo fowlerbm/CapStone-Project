@@ -17,44 +17,19 @@
 <div id="ForumContainer">
 <!-- Get top 10 threads and make copys of the tread div -->
 
-    <div id="Thread">
-     <!-- Thread title  -->
-        Thread Title
+    @foreach($threads as $thread)
 
-        </br>
+        <br/>
 
-     <!-- Thread text  -->
-        this is the text of the thread
-    </div>
+        <div id="Thread" style="border:1px solid black;">
+            <a href="{{ url("/forum", $thread->thread_id) }}">
+                <h4>{{ $thread->title }}</h4>
+            </a>
+        </div>
 
-    <div id="Thread">
-        <!-- Thread title  -->
-        Thread Title
+        <br/>
 
-        </br>
+    @endforeach
 
-        <!-- Thread text  -->
-        this is the text of the thread
-    </div>
-
-    <div id="Thread">
-        <!-- Thread title  -->
-        Thread Title
-
-        </br>
-
-        <!-- Thread text  -->
-        this is the text of the thread
-    </div>
-
-    <div id="Thread">
-        <!-- Thread title  -->
-        Thread Title
-
-        </br>
-
-        <!-- Thread text  -->
-        this is the text of the thread
-    </div>
 
 </div>

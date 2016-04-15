@@ -52,9 +52,9 @@ class TagsController extends Controller {
 	public function show($id)
 	{
 
-		$game = DB::table('game')->where('tags', $id)->get();
+		$games = DB::table('game')->where('tags', $id)->get();
 
-		return view('Tags.TagGames' , compact('game'));
+		return view('Tags.TagGames' , compact('games'));
 	}
 
 	/**

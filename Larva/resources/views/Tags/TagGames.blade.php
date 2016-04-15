@@ -15,6 +15,8 @@
 
                         <br/>
 
+
+
                         <div class="game" style="border:1px solid black;">
                             <a href="{{ url("/games", $game->game_id) }}">
                                 <h4>{{ $game->title }}</h4>

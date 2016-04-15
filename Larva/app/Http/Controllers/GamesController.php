@@ -3,11 +3,13 @@
 use App\Game;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 use App\Tag;
+use App\Thread;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Input;
+
 
 class GamesController extends Controller {
 
@@ -61,8 +63,9 @@ class GamesController extends Controller {
 		$game = Game::findOrFail($id);
         $query = $game->tags;
         $tag = Tag::findOrFail($query);
-
-		return view('games.game', compact('game' , 'tag'));
+        $thread = DB::table('thread')->where('game', $id)->get();
+        $posts = DB::table('posts')->where('thread_id', $id)->get();
+		return view('games.game', compact('game' , 'tag' , 'posts'));
 	}
 
 	/**

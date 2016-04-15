@@ -3,7 +3,11 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Post;
+use App\Thread;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
 
 class ForumController extends Controller {
 
@@ -14,7 +18,8 @@ class ForumController extends Controller {
 	 */
 	public function index()
 	{
-		return view('Forum.ForumIndex');
+        $threads = Thread::all();
+		return view('Forum.ForumIndex', compact('threads'));
 	}
 
 	/**
@@ -45,7 +50,11 @@ class ForumController extends Controller {
 	 */
 	public function show($id)
 	{
-        return view('Forum.Thread');
+        $thread = Thread::findOrFail($id);
+
+        $posts = DB::table('posts')->where('thread_id', $id)->get();
+
+        return view('Forum.Thread' ,compact('thread' , 'posts'));
 	}
 
 	/**

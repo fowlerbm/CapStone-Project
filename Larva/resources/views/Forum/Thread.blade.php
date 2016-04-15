@@ -12,7 +12,7 @@
 <div id="PostForm">
 
   {{--
-    {!! Form::model($Post,['method' => 'PATCH', 'action' => ['PostController@create', $thread->id]]) !!}
+    {!! Form::model($post,['method' => 'PATCH', 'action' => ['PostController@create', $thread->id]]) !!}
 
     <div class="form-group">
         {!! Form::label('content', 'content:') !!}
@@ -30,27 +30,25 @@
 
 <div id="ThreadInfo">
 
-    Thread Title
+    <h2>{{$thread->title}}</h2>
 
 </div>
 
 <div id="ThreadContainer">
 
-    <div id="Post">
-        <!-- post text -->
-        post text
-    </div>
-    <div id="Post">
-        <!-- post text -->
-        post text
-    </div>
-    <div id="Post">
-        <!-- post text -->
-        post text
-    </div>
-    <div id="Post">
-        <!-- post text -->
-        post text
-    </div>
+    @foreach($posts as $post)
+
+
+
+        <div id="Post" style="border:1px solid black;">
+
+              {{ $post->content }}
+
+        </div>
+
+
+
+    @endforeach
+
 
 </div>

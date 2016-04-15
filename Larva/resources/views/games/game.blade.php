@@ -111,7 +111,23 @@
         <div class="tab-content">
             <div id="Comments" class="tab-pane fade in active">
                 <h3>Comments</h3>
+                @if(!empty($posts))
+                @foreach($posts as $post)
+
+
+
+                    <div id="Post" style="border:1px solid black;">
+
+                        {{ $post->content }}
+
+                    </div>
+
+
+
+                @endforeach
+                @else
                 <p>Sorry we can't seem to find any comments for the game on the server right now, please try again later :(</p>
+                    @endif
             </div>
             <div id="Scores" class="tab-pane fade">
                 <h3>High Scores</h3>

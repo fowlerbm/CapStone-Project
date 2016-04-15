@@ -15,11 +15,11 @@ class Thread extends Migration {
         Schema::create('thread', function (Blueprint $table) {
             $table->increments('thread_id');
             $table->string('title');
-			$table->boolean("comment_thread"); //to check if it's for a game comment thread
-            $table->boolean('sticky');
-            $table->boolean('locked');
-			$table->boolean('hidden');
-			$table->boolean('flagged');
+			$table->boolean("comment_thread")->nullable(); //to check if it's for a game comment thread
+            $table->boolean('sticky')->nullable();
+            $table->boolean('locked')->nullable();
+			$table->boolean('hidden')->nullable();
+			$table->boolean('flagged')->nullable();
             $table->timestamps();
 
 			$table->integer('game')->nullable(); //some threads wont link to a game, just general thread
