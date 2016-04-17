@@ -31,6 +31,8 @@ Route::resource('random', 'RandomController');
 
 Route::resource('tag', 'TagsController');
 
+Route::resource('post', 'PostController');
+
 
 
 

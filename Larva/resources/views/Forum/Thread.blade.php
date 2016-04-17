@@ -11,20 +11,20 @@
 
 <div id="PostForm">
 
-  {{--
-    {!! Form::model($post,['method' => 'PATCH', 'action' => ['PostController@create', $thread->id]]) !!}
 
-    <div class="form-group">
-        {!! Form::label('content', 'content:') !!}
-        {!! Form::text('content', null, ['class' => 'form-control']) !!}
-    </div>
-    <div class="form-group">
-        {!! Form::submit('Submit', ['class' => 'btn btn-primary form-control']) !!}
-    </div>
+    {{--{!! Form::model($post,['method' => 'PATCH', 'action' => ['PostController@create', $thread->id]]) !!}--}}
 
-    {!! Form::close() !!}
+    {{--<div class="form-group">--}}
+        {{--{!! Form::label('content', 'content:') !!}--}}
+        {{--{!! Form::text('content', null, ['class' => 'form-control']) !!}--}}
+    {{--</div>--}}
+    {{--<div class="form-group">--}}
+        {{--{!! Form::submit('Submit', ['class' => 'btn btn-primary form-control']) !!}--}}
+    {{--</div>--}}
 
-    --}}
+    {{--{!! Form::close() !!}--}}
+
+
 
 </div>
 
@@ -38,6 +38,9 @@
 
     @foreach($posts as $post)
 
+        {!! Form::open(['route' => ['post.destroy', $post->post_id], 'method' => 'delete']) !!}
+            <input type="submit" value="Delete Post" >
+        {!! Form::close() !!}
 
 
         <div id="Post" style="border:1px solid black;">

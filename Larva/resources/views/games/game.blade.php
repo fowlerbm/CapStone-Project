@@ -12,9 +12,9 @@
 
 @else
     @if(Auth::user()->admin == true)
-        <form method="DELETE" action="/games/{{$game->game_id}} ">
+        {!! Form::open(['route' => ['games.destroy', $game->game_id], 'method' => 'delete']) !!}
             <input type="submit" value="Delete Game" >
-        </form>
+        {!! Form::close() !!}
     @endif
 @endif
 
@@ -50,7 +50,6 @@
     <div id="GameUserOptions">
         <ul id="OptionsList">
             <li><a href="#" class="Fav">Favorite Game</a>  </li>
-            <li>Rating: {{ $game->averageRating }}</li>
            <li>@include('Partials.rating')</li>
 
         </ul>
@@ -59,7 +58,7 @@
     <!-- Details line is - Author , Date published and author contact -->
     <div id="GameDetails">
         <ul id="DetailList">
-            <li>{{ $game->author()->username }}</li>
+            <li>Unknown Author</li>
             <li>Unknown published Date</li>
             <li>Unknown Author contact</li>
         </ul>

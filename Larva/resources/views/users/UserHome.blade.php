@@ -24,7 +24,23 @@
                 </div>
                 <div id="Chat" class="tab-pane fade">
                     <h3>Chat</h3>
-                    <p>Sorry we can't seem to find any Chat on the server right now, please try again later :(</p>
+                    @if(!empty($posts))
+                        @foreach($posts as $post)
+
+
+
+                            <div id="Post" style="border:1px solid black;">
+
+                                {{ $post->content }}
+
+                            </div>
+
+
+
+                        @endforeach
+                    @else
+                        <p>Sorry we can't seem to find any comments for the game on the server right now, please try again later :(</p>
+                    @endif
                 </div>
             </div>
         </div>
@@ -45,7 +61,7 @@
 
 
                         <div id="Game" style="border:1px solid black;">
-                            <a href="{{ url("/user/", $user->user_id) }}">
+                            <a href="{{ url("/user", $user->user_id) }}">
                                 <h4>{{ $user->username }}</h4>
                             </a>
                         </div>

@@ -12,9 +12,9 @@
 
 @else
     @if(Auth::user()->admin == true)
-        <form method="delete" action="/user/{{$user->user_id}} ">
+        {!! Form::open(['route' => ['user.destroy', $user->user_id], 'method' => 'delete']) !!}
             <input type="submit" value="Delete Profile" >
-        </form>
+        {!! Form::close() !!}
     @endif
 @endif
 
@@ -24,7 +24,7 @@
 
 
 @else
-    @if(Auth::user()->username == $user->username)
+    @if(Auth::user()->user_id == $user->user_id)
         <div id="UserControl">
             <form method="get" action="/user/{{$user->user_id}}/edit ">
                 <input type="submit" value="Edit Profile" >

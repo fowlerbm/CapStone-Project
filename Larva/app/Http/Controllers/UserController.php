@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\User;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -33,7 +34,8 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all()->take(5);
-        return view('users.UserHome' , compact('users'));
+        $posts = DB::table('posts')->where('thread_id', 1)->get();
+        return view('users.UserHome' , compact('users' , 'posts'));
     }
 
 
@@ -72,10 +74,13 @@ class UserController extends Controller
 
         return redirect( url("/user", $user->user_id) );
     }
+
     public function destroy($id)
     {
         $user = User::findOrFail($id);
-        $user->distroy;
+        $user->delete();
+
+        return redirect( url("/user"));
     }
 
 }

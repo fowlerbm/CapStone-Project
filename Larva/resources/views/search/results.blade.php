@@ -14,7 +14,7 @@
         <div class="tab-content">
             <div id="Games" class="tab-pane fade in active">
                 <h3>Games</h3>
-                @foreach($result as $results)
+                @foreach($results as $result)
                     <div>
                         <h3>{{ $result->title }}</h3>
                         <p>{{ $result->description }}</p>
@@ -23,7 +23,7 @@
             </div>
             <div id="Tags" class="tab-pane fade">
                 <h3>Tags</h3>
-                @foreach($TagResults as $results)
+                @foreach($TagResults as $result)
                     <div>
                         <h3>{{ $result->name }}</h3>
                     </div>
@@ -31,7 +31,7 @@
             </div>
             <div id="Users" class="tab-pane fade">
                 <h3>Users</h3>
-                @foreach($UserResults as $results)
+                @foreach($UserResults as $result)
                     <div>
                         <h3>{{ $result->username }}</h3>
                     </div>
