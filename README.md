@@ -21,7 +21,3 @@ LeetStreet was started as a final project for a school class
 # Credits
 
 Thank you to all who contribute we can't do it without your hard work!
-
-# License
-
-TODO: Write license
